@@ -78,6 +78,5 @@ class WeatherServiceTest {
         assertEquals("저장된 mid의 개수는 실행 1번당 1", 1, all.size());
         assertEquals("저장된 midWeather의 상세 정보 개수는 8", 8, midWeatherInfoList.size());
 
-
     }
 }
