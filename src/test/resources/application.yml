@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/weather
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/weather
+#    username: root
+#    password: Insanejam0220!
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddlAuto: create
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+    open-in-view: true
+
+logging.level:
+  org.hibernate.SQL: debug
