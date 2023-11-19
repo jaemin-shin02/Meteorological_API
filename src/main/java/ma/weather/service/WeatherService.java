@@ -34,6 +34,7 @@ public class WeatherService {
 
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(url, String.class);
+        System.out.println("result = " + result);
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {

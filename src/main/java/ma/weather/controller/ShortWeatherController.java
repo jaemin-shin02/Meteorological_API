@@ -32,9 +32,9 @@ public class ShortWeatherController {
     @ResponseBody
     public Result shortWeather(){
 
-        weatherService.getShortTermForecast("20231116", "0500", "60", "127");
+        weatherService.getShortTermForecast("20231119", "0500", "60", "127");
 
-        List<ShortWeather> byBaseDateAndTime = shortWeatherService.findByBaseDateAndTime("20231116", "0500");
+        List<ShortWeather> byBaseDateAndTime = shortWeatherService.findByBaseDateAndTime("20231119", "0500");
 
         List<ShortWeatherDto> shortWeatherDtoList = new ArrayList<>();
         for (ShortWeather shortWeather : byBaseDateAndTime) {

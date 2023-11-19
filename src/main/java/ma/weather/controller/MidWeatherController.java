@@ -30,7 +30,7 @@ public class MidWeatherController {
     @ResponseBody
     public Result midWeather(){
 
-        MidWeatherResponse midTa = weatherService.getMidTa("11B10101", "202311170600");
+        MidWeatherResponse midTa = weatherService.getMidTa("11B10101", "202311190600");
         MidWeather midWeather = midWeatherService.findByRegId("11B10101");
         List<MidWeatherInfo> byMidWeatherId = midWeatherInfoService.findByMidWeatherId(midWeather.getId());
         List<MidWeatherDto> collect = byMidWeatherId.stream().map(

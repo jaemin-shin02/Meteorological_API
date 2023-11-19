@@ -31,9 +31,9 @@ public class UltraSrtWeatherController {
     @ResponseBody
     public Result ultraShortWeather(){
 
-        weatherService.getMShortTermForecast("20231116", "0630", "60", "127");
+        weatherService.getMShortTermForecast("20231119", "0630", "60", "127");
 
-        List<UltraSrtWeather> byBaseDateAndTime = ultraSrtWeatherService.findByBaseDateAndTime("20231116", "0630");
+        List<UltraSrtWeather> byBaseDateAndTime = ultraSrtWeatherService.findByBaseDateAndTime("20231119", "0630");
 
         List<UltraSrtWeatherDto> ultraSrtWeatherDtoList = new ArrayList<>();
 

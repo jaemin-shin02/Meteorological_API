@@ -34,7 +34,7 @@ class WeatherServiceTest {
     @Test
     public void shortWeather() throws Exception {
         //given
-        WeatherResponse shortTermForecast = weatherService.getShortTermForecast("20231116", "0500", "60", "127");
+        WeatherResponse shortTermForecast = weatherService.getShortTermForecast("20231119", "0500", "60", "127");
         //when
         List<ShortWeather> all = shortWeatherService.findAll();
         ShortWeather shortWeather = all.get(0);
@@ -50,7 +50,7 @@ class WeatherServiceTest {
     @Test
     public void UltSrtWeather() throws Exception {
         //given
-        WeatherResponse mShortTermForecast = weatherService.getMShortTermForecast("20231116", "0500", "60", "127");
+        WeatherResponse mShortTermForecast = weatherService.getMShortTermForecast("20231119", "0500", "60", "127");
         //when
         List<UltraSrtWeather> all = ultraSrtWeatherService.findAll();
         UltraSrtWeather ultraSrtWeather = all.get(0);
@@ -67,7 +67,7 @@ class WeatherServiceTest {
     @Test
     public void midWeather() throws Exception {
         //given
-        MidWeatherResponse midTa = weatherService.getMidTa("11B10101", "202311170600");
+        MidWeatherResponse midTa = weatherService.getMidTa("11B10101", "202311190600");
         //when
         List<MidWeather> all = midWeatherService.findAll();
         MidWeather midWeather = all.get(0);

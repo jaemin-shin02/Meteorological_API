@@ -2,6 +2,7 @@ package ma.weather.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import ma.weather.domain.MidWeather;
 
 @Data
 @AllArgsConstructor
@@ -15,4 +16,10 @@ public class MidWeatherDto {
     private int taMax;
     private int taMaxLow;
     private int taMaxHigh;
+
+    public MidWeather toEntity() {
+        MidWeather midWeather = MidWeather.create(this.regId);
+
+        return midWeather;
+    }
 }
